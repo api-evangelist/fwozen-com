@@ -1,4 +1,4 @@
-# fwozen-com
+# Fwozen
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -64,5 +64,141 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-fwozen-com is a company surfaced via the API Evangelist harvest backlog (source: mcp-registry) and added to the network as a stub for full-pipeline profiling.
-- https://fwozen.com/
+Fwozen provides organization‑wide code and deploy freeze capabilities for GitHub. It lets teams schedule merge blocks during releases, holidays, or incidents via a web app, Slack, or API. The service is free‑tier available and integrates with GitHub rules to automatically enforce freezes.
+
+**Areas:** GitHub · code freeze · merge freeze · deploy gate · security
+
+## Fwozen on APIs.io
+
+Everything profiled for Fwozen is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/fwozen-com/](https://apis.io/providers/fwozen-com/)** — or go straight to one of the APIs or properties below.
+
+### APIs (10)
+
+- [Fwozen API keys API](https://apis.io/apis/fwozen-com/fwozen-com-api-keys-api/) — Minting, rotating and revoking `fwz_` keys. Session credential only, always: a key can never mint another key.
+- [Fwozen Audit API](https://apis.io/apis/fwozen-com/fwozen-com-audit-api/) — The append-only record. Every freeze, thaw, exception and enforcement write, with an actor and a source on every row, plus a CSV export.
+- [Fwozen Billing API](https://apis.io/apis/fwozen-com/fwozen-com-billing-api/) — Plans, entitlements, the no-card trial, and links to Stripe. No route here takes a card or completes a payment: they return a URL for a human to open.
+- [Fwozen Branches API](https://apis.io/apis/fwozen-com/fwozen-com-branches-api/) — Watched branches. Watching a branch is what tells Fwozen where to write the `fwozen` check and whose rules to read, and a branch id (`wbr_…`) is what a…
+- [Fwozen Enforcement API](https://apis.io/apis/fwozen-com/fwozen-com-enforcement-api/) — What GitHub actually says about each watched branch: whether the `fwozen` check is active, required and pinned, plus the snippets for making it so. Setup is…
+- [Fwozen Exceptions API](https://apis.io/apis/fwozen-com/fwozen-com-exceptions-api/) — Letting one pull request through an active freeze, with a reason and a time limit, and the request-and-approve flow for organizations that require a second…
+- [Fwozen Freezes API](https://apis.io/apis/fwozen-com/fwozen-com-freezes-api/) — Starting, listing, extending and lifting freezes, and the freeze-state endpoint a pipeline polls. Lifting is never blocked by a billing state.
+- [Fwozen Organizations API](https://apis.io/apis/fwozen-com/fwozen-com-organizations-api/) — The Fwozen organization, its members, and the onboarding steps that create one. One organization holds many GitHub installations.
+- [Fwozen Repositories API](https://apis.io/apis/fwozen-com/fwozen-com-repositories-api/) — The repositories Fwozen can see, and the ones you have enabled. Private repos are the billable unit, and Fwozen never enables one on its own.
+- [Fwozen Schedules API](https://apis.io/apis/fwozen-com/fwozen-com-schedules-api/) — Recurring and one-off freeze windows in a real timezone. A window is a wall-clock time plus a calendar day offset, never a duration, which is what makes it…
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### Agentic access (1)
+
+Which operations an agent can call, which act, and which need a human in the loop.
+
+- [Fwozen Com Agentic Access](https://apis.io/agentic-access/fwozen-com/fwozen-com-agentic-access/)
+
+#### JSON Schema (6)
+
+The data models the API reads and writes.
+
+- [Billing](https://apis.io/schemas/fwozen-com/fwozen-com-billing/)
+- [EnforcementDetailView](https://apis.io/schemas/fwozen-com/fwozen-com-enforcement-detail-view/)
+- [EnforcementSummary](https://apis.io/schemas/fwozen-com/fwozen-com-enforcement-summary/)
+- [ExceptionRequest](https://apis.io/schemas/fwozen-com/fwozen-com-exception-request/)
+- [Freeze](https://apis.io/schemas/fwozen-com/fwozen-com-freeze/)
+- [Schedule](https://apis.io/schemas/fwozen-com/fwozen-com-schedule/)
+
+#### JSON-LD (1)
+
+Linked-data contexts for the provider's vocabulary.
+
+- [Fwozen Com Context](https://apis.io/jsonld/fwozen-com/fwozen-com-context/)
+
+#### Governance rules (1)
+
+Spectral rulesets for the provider's contracts.
+
+- [Fwozen API Rules](https://apis.io/rules/fwozen-com/fwozen-com-rules/)
+
+#### Security (3)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Fwozen Com Authentication](https://apis.io/security/fwozen-com/fwozen-com-authentication/)
+- [Fwozen Com Domain Security](https://apis.io/security/fwozen-com/fwozen-com-domain-security/)
+- [Fwozen Com Vulnerability Disclosure](https://apis.io/security/fwozen-com/fwozen-com-vulnerability-disclosure/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Fwozen Com Plans Pricing](https://apis.io/plans/fwozen-com/fwozen-com-plans-pricing/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://fwozen.com/)
+- [Documentation](https://fwozen.com/docs)
+- [Getting started](https://fwozen.com/how-it-works)
+- [API reference](https://fwozen.com/docs/api/reference)
+- [Pricing](https://fwozen.com/pricing)
+- [Support](https://fwozen.com/support)
+- [Blog](https://fwozen.com/blog)
+- [Security](https://fwozen.com/security)
+- [Terms of service](https://fwozen.com/legal/terms)
+- [Privacy policy](https://fwozen.com/legal/privacy)
+
+## API Evangelist rating
+
+**Kin Score 59.1** — strong · rubric 0.27.0 · scored 2026-11-09
+
+| Facet | Score |
+|---|---|
+| Discoverability | 66.1 |
+| Contract quality | 60.5 |
+| Contract governance | 79.1 |
+| Operational transparency | 10.5 |
+| Developer ergonomics | 61.2 |
+| Access clarity | 60.0 |
+
+**Agent readiness 39.3** — agent-ready (gated down from agent-native)
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | unknown |
+| Reversibility Documented | — |
+| MCP Server | documented (partial credit) |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | documented (partial credit) |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | unknown |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | yes |
+| Delegated Identity | — |
+| Protected Resource Metadata | verified |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+| Pagination Ratio | partial |
+| Operation Distinctiveness | distinct |
+| MCP Tool Quality | na |
+
+**Regulatory alignment 30.4** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/fwozen-com/](https://apis.io/providers/fwozen-com/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Fwozen: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/fwozen-com/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
